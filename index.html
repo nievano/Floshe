@@ -4,314 +4,160 @@
         <meta charset="utf-8">
         <title>Floshe</title>
         <link rel="stylesheet" href="style.css">
-        <link rel="icon" type="image" href="fish.png">
+        <link rel="icon" type="image" href="img/fish.png">
     </head>
     <body>
-        <div class="hori">
+        <div class="inline">
             <h1>Floshe</h1>
-            <h2>Level: 18</h2>
-            <h2>Class: Undead(/Undying) Celestial Fiend Warlock</h2>
+            <h2 id="level"></h2>
+            <h2>Class: Void Undead/Undying Celestial Fiend Warlock</h2>
             <h2>Race: Locathah</h2>
             <h2>Background: Courtier</h2>
             <h2>Alignment: True Neutral</h2>
         </div>
-        <div class="hori">
-            <h2>HP: 170(+40)(36)</h2>
-            <h2>Hit Dice: 18d8</h2>
-            <h2>AC: 20</h2>
-            <h2>Proficiency: +6</h2>
-            <h2>Speed: 30(W/S)</h2>
-            <h2>Initiative: +3</h2>
+        <div class="inline">
+            <h2 id="hpMax"></h2>
+            <h2 id="hpTemp"></h2>
+            <h2 id="hpAll"></h2>
+            <h2 id="hitDice"></h2>
+            <h2 id="ac"></h2>
+            <h2 id="prof"></h2>
+            <h2 id="spd"></h2>
+            <h2 id="init"></h2>
         </div>
-        <div class="hori">
+        <div class="inline">
             <div class="abil">
-                <h1>Strength: 8</h1>
-                <h3>Modifier: -1</h3>
-                <h3>Save: -1</h3>
-            </div>
-            <div class="abil">
-                <h1>Dexterity: 17</h1>
-                <h3>Modifier: +3</h3>
-                <h3>Save: +9</h3>
+                <h1 id="strScr"></h1>
+                <h3 id="strMod"></h3>
+                <h3 id="strSav"></h3>
             </div>
             <div class="abil">
-                <h1>Constitution: 19(9)</h1>
-                <h3>Modifier: +4</h3>
-                <h3>Save: +5</h3>
+                <h1 id="dexScr"></h1>
+                <h3 id="dexMod"></h3>
+                <h3 id="dexSav"></h3>
             </div>
             <div class="abil">
-                <h1>Intelligence: 14</h1>
-                <h3>Modifier: +2</h3>
-                <h3>Save: +2</h3>
+                <h1 id="conScr"></h1>
+                <h3 id="conMod"></h3>
+                <h3 id="conSav"></h3>
             </div>
             <div class="abil">
-                <h1>Wisdom: 18</h1>
-                <h3>Modifier: +4</h3>
-                <h3>Save: +10</h3>
+                <h1 id="intScr"></h1>
+                <h3 id="intMod"></h3>
+                <h3 id="intSav"></h3>
             </div>
             <div class="abil">
-                <h1>Charisma: 24(+4)</h1>
-                <h3>Modifier: +7(+2)</h3>
-                <h3>Save: +13(+2)</h3>
+                <h1 id="wisScr"></h1>
+                <h3 id="wisMod"></h3>
+                <h3 id="wisSav"></h3>
             </div>
-        </div>
-        <div class="hori">
-            <div class="skill">
-                <h2>Strength</h2>
-                <h3>Athletics: +5</h3>
-            </div>
-            <div class="skill">
-                <h2>Dexterity</h2>
-                <h3>Acrobatics: +3</h3>
-                <h3>Sleight of Hand: +3</h3>
-                <h3>Stealth: +3</h3>
-            </div>
-            <div class="skill">
-                <h2>Intelligence</h2>
-                <h3>Arcana: +2</h3>
-                <h3>History: +8</h3>
-                <h3>Investigation: +8(+5)</h3>
-                <h3>Nature: +2</h3>
-                <h3>Religion: +2</h3>
-            </div>
-            <div class="skill">
-                <h2>Wisdom</h2>
-                <h3>Animal Handling: +4</h3>
-                <h3>Insight: +16</h3>
-                <h3>Medicine: +10</h3>
-                <h3>Perception: +16(+5)</h3>
-                <h3>Survival: +10</h3>
-            </div>
-            <div class="skill">
-                <h2>Charisma</h2>
-                <h3>Deception: +13(+2)</h3>
-                <h3>Intimidation: +7(+2)</h3>
-                <h3>Performance: +7(+2)</h3>
-                <h3>Persuasion: +19(+2)</h3>
+            <div class="abil">
+                <h1 id="chaScr"></h1>
+                <h3 id="chaMod"></h3>
+                <h3 id="chaSav"></h3>
             </div>
         </div>
-        <div class="hori">
-            <div class="skill">
-                <h2>Proficiencies</h2>
-                <h3>Light Armor</h3>
-                <h3>Simple Weapons</h3>
-            </div>
-            <div class="skill">
-                <h2>Languages</h2>
-                <h3>Common</h3>
-                <h3>Abyssal</h3>
-                <h3>Aquan</h3>
-                <h3>Celestial</h3>
-                <h3>Sign Language</h3>
-                <h3>Ignan</h3>
-                <h3>Infernal</h3>
-            </div>
-        </div>
-        <div class="hori">
+        <div class="inline">
             <div class="list">
-                <h2>Caster Level: 18</h2>
-                <h2>Spell Attack: +16(+2)</h2>
-                <h2>Spell DC: 24(+2)</h2>
+                <h2>Strength</h2>
+                <h3 id="athl"></h3>
+            </div>
+            <div class="list">
+                <h2>Dexterity</h2>
+                <h3 id="acro"></h3>
+                <h3 id="slei"></h3>
+                <h3 id="stea"></h3>
+            </div>
+            <div class="list">
+                <h2>Intelligence</h2>
+                <h3 id="arca"></h3>
+                <h3 id="hist"></h3>
+                <h3 id="inve"></h3>
+                <h3 id="natu"></h3>
+                <h3 id="reli"></h3>
+            </div>
+            <div class="list">
+                <h2>Wisdom</h2>
+                <h3 id="anim"></h3>
+                <h3 id="insi"></h3>
+                <h3 id="medi"></h3>
+                <h3 id="perc"></h3>
+                <h3 id="surv"></h3>
+            </div>
+            <div class="list">
+                <h2>Charisma</h2>
+                <h3 id="dece"></h3>
+                <h3 id="inti"></h3>
+                <h3 id="perf"></h3>
+                <h3 id="pers"></h3>
+            </div>
+        </div>
+        <div class="inline">
+            <div>
+                <h2 id="clvl"></h2>
+                <h2 id="splatk"></h2>
+                <h2 id="spldc"></h2>
             </div>
             <div class="list">
                 <h2>Spell Slots</h2>
-                <h3>1st Level: 0(2)</h3>
-                <h3>2nd Level: 0(2)</h3>
-                <h3>3rd Level: 0(2)</h3>
-                <h3>4th Level: 0(2)</h3>
-                <h3>5th Level: 0(2)</h3>
-                <h3>6th Level: 4</h3>
-                <h3>9th Level: 2(+1)</h3>
+                <h3 id="splslt1"></h3>
+                <h3 id="splslt2"></h3>
+                <h3 id="splslt3"></h3>
+                <h3 id="splslt4"></h3>
+                <h3 id="splslt5"></h3>
+                <h3 id="splslt6"></h3>
+                <h3 id="splslt7"></h3>
+                <h3 id="splslt8"></h3>
+                <h3 id="splslt9"></h3>
+            </div>
+            <div class="list">
+                <h2>Coven Slots</h2>
+                <h3 id="cvnslt1"></h3>
+                <h3 id="cvnslt2"></h3>
+                <h3 id="cvnslt3"></h3>
+                <h3 id="cvnslt4"></h3>
+                <h3 id="cvnslt5"></h3>
+                <h3 id="cvnslt6"></h3>
+                <h3 id="cvnslt7"></h3>
+                <h3 id="cvnslt8"></h3>
+                <h3 id="cvnslt9"></h3>
             </div>
         </div>
-        <div class="hori">
-            <h1>Spell List</h1>
-            <div class="slot">
-                <h2>Cantrips</h2>
-                <h3 onmouseover="showSpell(this)" onmouseleave="hideSpell(this)">Fire Bolt</h3>
-                <h3>Encode Thoughts</h3>
-                <h3 onmouseover="showSpell(this)" onmouseleave="hideSpell(this)">Mage Hand</h3>
-                <h3 onmouseover="showSpell(this)" onmouseleave="hideSpell(this)">Message</h3>
-                <h3 onmouseover="showSpell(this)" onmouseleave="hideSpell(this)">Minor Illusion</h3>
-                <h3 onmouseover="showSpell(this)" onmouseleave="hideSpell(this)">Mold Earth</h3>
-                <h3 onmouseover="showSpell(this)" onmouseleave="hideSpell(this)">Prestidigitation</h3>
-                <h3 onmouseover="showSpell(this)" onmouseleave="hideSpell(this)">Produce Flame</h3>
-                <h3 onmouseover="showSpell(this)" onmouseleave="hideSpell(this)">Sacred Flame</h3>
-                <h3 onmouseover="showSpell(this)" onmouseleave="hideSpell(this)">Shocking Grasp</h3>
-            </div>
-            <div class="slot">
-                <h2>Spells(17)</h2>
-                <h3>Detect Thoughts</h3>
-                <h3 onmouseover="showSpell(this)" onmouseleave="hideSpell(this)">Hellish Rebuke</h3>
-                <h3 onmouseover="showSpell(this)" onmouseleave="hideSpell(this)">Scorching Ray</h3>
-                <h3 onmouseover="showSpell(this)" onmouseleave="hideSpell(this)">Ashardalon's Stride</h3>
-                <h3>Dispel Magic</h3>
-                <h3 onmouseover="showSpell(this)" onmouseleave="hideSpell(this)">Fireball</h3>
-                <h3>Hex</h3>
-                <h3 onmouseover="showSpell(this)" onmouseleave="hideSpell(this)">Melf's Minute Meteors</h3>
-                <h3 onmouseover="showSpell(this)" onmouseleave="hideSpell(this)">Revivify</h3>
-                <h3 onmouseover="showSpell(this)" onmouseleave="hideSpell(this)">Spirit Shroud</h3>
-                <h3 onmouseover="showSpell(this)" onmouseleave="hideSpell(this)">Dimension Door</h3>
-                <h3 onmouseover="showSpell(this)" onmouseleave="hideSpell(this)">Sickening Radiance</h3>
-                <h3>Prayer of Healing</h3>
-                <h3>Death Ward</h3>
-                <h3 onmouseover="showSpell(this)" onmouseleave="hideSpell(this)">Scrying</h3>
-                <h3>Antilife Shell</h3>
-                <h3>Contingency</h3>
-            </div>
-            <div class="slot">
-                <h2>Rituals</h2>
-                <h3 onmouseover="showSpell(this)" onmouseleave="hideSpell(this)">Alarm</h3>
-                <h3 onmouseover="showSpell(this)" onmouseleave="hideSpell(this)">Ceremony</h3>
-                <h3 onmouseover="showSpell(this)" onmouseleave="hideSpell(this)">Comprehend Languages</h3>
-                <h3 onmouseover="showSpell(this)" onmouseleave="hideSpell(this)">Detect Magic</h3>
-                <h3 onmouseover="showSpell(this)" onmouseleave="hideSpell(this)">Detect Poison and Disease</h3>
-                <h3 onmouseover="showSpell(this)" onmouseleave="hideSpell(this)">Find Familiar</h3>
-                <h3 onmouseover="showSpell(this)" onmouseleave="hideSpell(this)">Guiding Hand</h3>
-                <h3 onmouseover="showSpell(this)" onmouseleave="hideSpell(this)">Identify</h3>
-                <h3 onmouseover="showSpell(this)" onmouseleave="hideSpell(this)">Illusory Script</h3>
-                <h3>Memorize Spell</h3>
-                <h3 onmouseover="showSpell(this)" onmouseleave="hideSpell(this)">Purify Food and Drink</h3>
-                <h3 onmouseover="showSpell(this)" onmouseleave="hideSpell(this)">Scribe Spell</h3>
-                <h3 onmouseover="showSpell(this)" onmouseleave="hideSpell(this)">Speak with Animals</h3>
-                <h3 onmouseover="showSpell(this)" onmouseleave="hideSpell(this)">Tenser's Floating Disk</h3>
-                <h3 onmouseover="showSpell(this)" onmouseleave="hideSpell(this)">Unseen Servant</h3>
-                <h3 onmouseover="showSpell(this)" onmouseleave="hideSpell(this)">Wild Cunning</h3>
-                <h3 onmouseover="showSpell(this)" onmouseleave="hideSpell(this)">Wristpocket</h3>
-                <h3 onmouseover="showSpell(this)" onmouseleave="hideSpell(this)">Modify Spell</h3>
-                <h3 onmouseover="showSpell(this)" onmouseleave="hideSpell(this)">Commune</h3>
-                <h3 onmouseover="showSpell(this)" onmouseleave="hideSpell(this)">Teleportation Circle</h3>
-            </div>
-            <div class="slot">
-                <h2>Mystic Arcanum</h2>
-                <h3>Forbiddance</h3>
-                <h3>Plane Shift</h3>
-                <h3>Telepathy</h3>
-                <h3>Foresight</h3>
-            </div>
-            <div class="slot">
-                <h2>Coven</h2>
-                <h3 onmouseover="showSpell(this)" onmouseleave="hideSpell(this)">Shield</h3>
-                <h3 onmouseover="showSpell(this)" onmouseleave="hideSpell(this)">Silvery Barbs</h3>
-                <h3 onmouseover="showSpell(this)" onmouseleave="hideSpell(this)">Calm Emotions</h3>
-                <h3 onmouseover="showSpell(this)" onmouseleave="hideSpell(this)">Wither and Bloom</h3>
-                <h3 onmouseover="showSpell(this)" onmouseleave="hideSpell(this)">Counterspell</h3>
-                <h3 onmouseover="showSpell(this)" onmouseleave="hideSpell(this)">Sending</h3>
-                <h3 onmouseover="showSpell(this)" onmouseleave="hideSpell(this)">Banishment</h3>
-                <h3 onmouseover="showSpell(this)" onmouseleave="hideSpell(this)">Polymorph</h3>
-                <h3 onmouseover="showSpell(this)" onmouseleave="hideSpell(this)">Immolation</h3>
-                <h3 onmouseover="showSpell(this)" onmouseleave="hideSpell(this)">Teleportation Circle</h3>
-            </div>
-        </div>
-        <div class="hori">
+        <div class="inline">
             <h1>Inventory</h1>
-            <div class="bag">
+            <div class="list">
                 <h2>Currency</h2>
                 <h3>Bank: 40,048 GP</h3>
                 <h3>Bag: 1,650 GP</h3>
             </div>
-            <div class="item">
+            <div class="list">
                 <h2>Equipment</h2>
-                <h3 onmouseover="showEquip(this)" onmouseleave="hideSpell(this)">Glamoured Studded Leather +3</h3>
-                <h3 onmouseover="showEquip(this)" onmouseleave="hideSpell(this)">Rod of the Pact Keeper +3</h3>
-                <h3 onmouseover="showEquip(this)" onmouseleave="hideSpell(this)">Amulet of Health</h3>
-                <h3 onmouseover="showEquip(this)" onmouseleave="hideSpell(this)">Bag of Holding</h3>
-                <h3 onmouseover="showEquip(this)" onmouseleave="hideSpell(this)">Complete Fiend's Pendant +Add-on</h3>
-                <h3 onmouseover="showEquip(this)" onmouseleave="hideSpell(this)">Sabine's Gas Mask</h3>
-            </div>
-            <div class="bag">
-                <h2>Items</h2>
-                <h3>Fine Clothes</h3>
-                <h3>Rope 60ft</h3>
-                <h3>Binder</h3>
-                <h3>Parchment</h3>
-                <h3>Ink Pen</h3>
-                <h3>Gasoline 1gal</h3>
-                <h3>Camera</h3>
-                <h3>Nathan's Paper</h3>
-                <h3>Maid's Stopwatch</h3>
-                <h3>Hazel's Tablet</h3>
-				<h3>Calamitus' Tome</h3>
-				<h3>Silla's Contract<h3>
-            </div>
-            <div class="bag">
-                <h2>Glyphs</h2>
-                <h3>Prismatic Wall</h3>
-                <h3>Astral Projection</h3>
-                <h3>Gate</h3>
-                <h3>Spirit Shroud</h3>
+                <h3>Glamoured Studded Leather +3 <input type="checkbox" id="armor"></h3>
+                <h3>Amulet of Health <input type="checkbox" id="amulet"></h3>
+                <h3>Complete Fiend's Pendant +Add-on <input type="checkbox" id="pendant"></h3>
+                <h3>Rod of the Pact Keeper +3 <input type="checkbox" id="rod"></h3>
+                <h3>Bag of Holding</h3>
+                <h3>Sabine's Gas Mask</h3>
             </div>
         </div>
-        <div class="hori">
+        <div class="inline">
             <h1>Features</h1>
-            <div class="feat">
-                <h2>Race</h2>
-                <h3 onmouseover="showFeat(this)" onmouseleave="hideSpell(this)">Natural Armor</h3>
-                <h3 onmouseover="showFeat(this)" onmouseleave="hideSpell(this)">Leviathan Will</h3>
-                <h3 onmouseover="showFeat(this)" onmouseleave="hideSpell(this)">Limited Amphibiousness</h3>
+            <div class="list">
+                <h2>Fiend</h2>
+                <h3>Resilience of the Archfiend</h3>
+                <h3>Brimstone Affinity</h3>
+                <h3>Brimstone Transformation <input type="checkbox" id="transBrim"></h3>
+                <h3>Brimstone Crags <input type="checkbox" id="domBrim"></h3>
             </div>
-            <div class="feat">
-                <h2>Background</h2>
-                <h3 onmouseover="showFeat(this)" onmouseleave="hideSpell(this)">Court Functionary</h3>
-            </div>
-            <div class="feat">
-                <h2>Class</h2>
-                <h3 onmouseover="showFeat(this)" onmouseleave="hideSpell(this)">Pact Magic</h3>
-                <h3 onmouseover="showFeat(this)" onmouseleave="hideSpell(this)">Otherworldly Patron (Fiend, Celestial, Undead)</h3>
-                <h3 onmouseover="showFeat(this)" onmouseleave="hideSpell(this)">Eldritch Invocations</h3>
-                <h3 onmouseover="showFeat(this)" onmouseleave="hideSpell(this)">Pact Boon (Tome)</h3>
-                <h3 onmouseover="showFeat(this)" onmouseleave="hideSpell(this)">Mystic Arcanum</h3>
-                <h3 onmouseover="showFeat(this)" onmouseleave="hideSpell(this)">Contact Patron</h3>
-                <h3>Transformations</h3>
-            </div>
-            <div class="feat">
-                <h2>Subclass</h2>
-                <div class="sub">
-                    <div>
-                        <h2>Fiend</h2>
-                        <h3 onmouseover="showFeat(this)" onmouseleave="hideSpell(this)">Resilience of the Archfiend</h3>
-                        <h3 onmouseover="showFeat(this)" onmouseleave="hideSpell(this)">Brimstone Affinity</h3>
-                        <h3 onmouseover="showFeat(this)" onmouseleave="hideSpell(this)">Brimstone Transformation</h3>
-                        <h3 onmouseover="showFeat(this)" onmouseleave="hideSpell(this)">Brimstone Crags</h3>
-                    </div>
-                    <div>
-                        <h2>Celestial</h2>
-                        <h3 onmouseover="showFeat(this)" onmouseleave="hideSpell(this)">Healing Light</h3>
-                        <h3 onmouseover="showFeat(this)" onmouseleave="hideSpell(this)">Radiant Soul</h3>
-                        <h3 onmouseover="showFeat(this)" onmouseleave="hideSpell(this)">Seraphim's Touch</h3>
-                        <h3 onmouseover="showFeat(this)" onmouseleave="hideSpell(this)">Seraph Transformation</h3>
-                    </div>
-                    <div>
-                        <h2>Undead</h2>
-                        <h3>Not Dead Yet</h3>
-                        <h3>Soul Fire</h3>
-                        <h3>Undying</h3>
-                        <h3>Your Contract has Expired</h3>
-                    </div>
-                </div>
-            </div>
-            <div class="feat">
-                <h2>Feats</h2>
-                <h3 onmouseover="showFeat(this)" onmouseleave="hideSpell(this)">Elemental Adept (Fire)</h3>
-                <h3 onmouseover="showFeat(this)" onmouseleave="hideSpell(this)">Observant</h3>
-                <h3 onmouseover="showFeat(this)" onmouseleave="hideSpell(this)">War Caster</h3>
-                <h3 onmouseover="showFeat(this)" onmouseleave="hideSpell(this)">Spell Sniper</h3>
-                <h3 onmouseover="showFeat(this)" onmouseleave="hideSpell(this)">Linguist</h3>
-                <h3>Flash Recall</h3>
-            </div>
-            <div class="feat">
-                <h2>Invocations</h2>
-                <h3 onmouseover="showFeat(this)" onmouseleave="hideSpell(this)">Devil's Sight</h3>
-                <h3 onmouseover="showFeat(this)" onmouseleave="hideSpell(this)">Book of Ancient Secrets</h3>
-                <h3 onmouseover="showFeat(this)" onmouseleave="hideSpell(this)">Ghostly Gaze</h3>
-                <h3 onmouseover="showFeat(this)" onmouseleave="hideSpell(this)">Eyes of the Rune Keeper</h3>
-                <h3 onmouseover="showFeat(this)" onmouseleave="hideSpell(this)">Aspect of the Moon</h3>
-                <h3 onmouseover="showFeat(this)" onmouseleave="hideSpell(this)">Witch Sight</h3>
+            <div class="list">
+                <h2>Celestial</h2>
+                <h3>Healing Light</h3>
+                <h3>Radiant Soul</h3>
+                <h3>Seraphim's Touch</h3>
+                <h3>Seraph Transformation <input type="checkbox" id="transSera"></h3>
             </div>
         </div>
-        <script src="spells.js"></script>
-        <script src="features.js"></script>
-        <script src="equipment.js"></script>
         <script src="app.js"></script>
+        <script src="toggle.js"></script>
     </body>
 </html>

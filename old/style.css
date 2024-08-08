@@ -1,0 +1,116 @@
+/*
+*{
+    outline: thin solid #ffffff;
+}
+*/
+body {
+    background-color: #400000;
+    color: white;
+    text-align: center;
+}
+h1 {
+    font-size: 1.5em;
+}
+h2 {
+    font-size: 1em;
+}
+h3 {
+    font-size: 0.75em
+}
+.hori h1 {
+    display: block;
+    margin: 1em;
+}
+.hori h2, h3 {
+    display: inline-block;
+    margin: 0.75em;
+    vertical-align: top;
+}
+.abil {
+    display: inline-block;
+}
+.abil h1 {
+    display: block;
+}
+.abil h3 {
+    display: inline-block;
+}
+.skill {
+    display: inline-block;
+    vertical-align: top;
+}
+.skill h3 {
+    display: block;
+}
+.slot, .list, .bag, .item, .feat {
+    display: inline-block;
+    vertical-align: top;
+}
+.slot h2, h3 {
+    display: block;
+}
+.slot h3:hover {
+    text-decoration: underline;
+}
+.list h2, h3 {
+    display: block;
+}
+.spell {
+    position: absolute;
+    background-color: #804000;
+    width: 50em;
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.spell h1 {
+    display: inline-block;
+    margin: 1em;
+}
+.spell h3 {
+    text-align: left;
+    padding-left: 1em;
+}
+.bag h2 {
+    display: block;
+}
+.item h2 {
+    display: block;
+}
+.item h3:hover {
+    text-decoration: underline;
+}
+.feat h3:hover {
+    text-decoration: underline;
+}
+.sub {
+    display: block;
+}
+.sub div {
+    display: inline-block;
+}
+.pop {
+    position: absolute;
+    background-color: #804000;
+    width: 50em;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -100%);
+}
+.equip {
+    position: absolute;
+    background-color: #804000;
+    width: 50em;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -75%);
+}
+.pop h2 {
+    text-align: left;
+    padding-left: 1em;
+}
+.equip h2 {
+    text-align: left;
+    padding-left: 1em;
+}
