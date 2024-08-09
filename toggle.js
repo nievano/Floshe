@@ -3,7 +3,7 @@ document.querySelector('input[id=armor]').addEventListener('change', () => {
         calcAc(17);
     }
     else {
-        calcAc(12);
+        calcAc(13);
     }
     setVars();
 });
