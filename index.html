@@ -17,9 +17,9 @@
         </div>
         <div class="inline">
             <h2 id="hpMax"></h2>
-            <h2 id="hpTemp"></h2>
-            <h2 id="hpAll"></h2>
-            <h2 id="hitDice"></h2>
+            <h2>Temp HP:  <input type="number" id="hpTemp" min="0" class="num"></h2>
+            <h2>HP: <input type="number" id="hpAll" class="num"></h2>
+            <h2>Hit Dice: <input type="number" id="hitDice" class="num"></h2>
             <h2 id="ac"></h2>
             <h2 id="prof"></h2>
             <h2 id="spd"></h2>
@@ -106,10 +106,9 @@
                 <h3>Ignan</h3>
                 <h3>Infernal</h3>
             </div>
-            <div class="list">
+            <div class="list" id="resimu">
                 <h2>Resistances</h2>
-                <h3>Radiant</h3>
-                <h3>Necrotic</h3>
+                <h2 id="imu">Immunities</h2>
             </div>
         </div>
         <div class="inline">
@@ -121,27 +120,27 @@
             </div>
             <div class="list">
                 <h2>Spell Slots</h2>
-                <h3 id="splslt1"></h3>
-                <h3 id="splslt2"></h3>
-                <h3 id="splslt3"></h3>
-                <h3 id="splslt4"></h3>
-                <h3 id="splslt5"></h3>
-                <h3 id="splslt6"></h3>
-                <h3 id="splslt7"></h3>
-                <h3 id="splslt8"></h3>
-                <h3 id="splslt9"></h3>
+                <h3><input type="number" id="splslt1" min="0" class="num"></h3>
+                <h3><input type="number" id="splslt2" min="0" class="num"></h3>
+                <h3><input type="number" id="splslt3" min="0" class="num"></h3>
+                <h3><input type="number" id="splslt4" min="0" class="num"></h3>
+                <h3><input type="number" id="splslt5" min="0" class="num"></h3>
+                <h3><input type="number" id="splslt6" min="0" class="num"></h3>
+                <h3><input type="number" id="splslt7" min="0" class="num"></h3>
+                <h3><input type="number" id="splslt8" min="0" class="num"></h3>
+                <h3><input type="number" id="splslt9" min="0" class="num"></h3>
             </div>
             <div class="list">
                 <h2>Coven Slots</h2>
-                <h3 id="cvnslt1"></h3>
-                <h3 id="cvnslt2"></h3>
-                <h3 id="cvnslt3"></h3>
-                <h3 id="cvnslt4"></h3>
-                <h3 id="cvnslt5"></h3>
-                <h3 id="cvnslt6"></h3>
-                <h3 id="cvnslt7"></h3>
-                <h3 id="cvnslt8"></h3>
-                <h3 id="cvnslt9"></h3>
+                <h3><input type="number" id="cvnslt1" min="0" class="num"></h3>
+                <h3><input type="number" id="cvnslt2" min="0" class="num"></h3>
+                <h3><input type="number" id="cvnslt3" min="0" class="num"></h3>
+                <h3><input type="number" id="cvnslt4" min="0" class="num"></h3>
+                <h3><input type="number" id="cvnslt5" min="0" class="num"></h3>
+                <h3><input type="number" id="cvnslt6" min="0" class="num"></h3>
+                <h3><input type="number" id="cvnslt7" min="0" class="num"></h3>
+                <h3><input type="number" id="cvnslt8" min="0" class="num"></h3>
+                <h3><input type="number" id="cvnslt9" min="0" class="num"></h3>
             </div>
             <div class="list">
                 <h2>Cantrips</h2>
@@ -232,10 +231,10 @@
             </div>
             <div class="list">
                 <h2>Equipment</h2>
-                <h3>Glamoured Studded Leather +3 <input type="checkbox" id="armor"></h3>
-                <h3>Amulet of Health <input type="checkbox" id="amulet"></h3>
-                <h3>Complete Fiend's Pendant +Add-on <input type="checkbox" id="pendant"></h3>
-                <h3>Rod of the Pact Keeper +3 <input type="checkbox" id="rod"></h3>
+                <h3>Glamoured Studded Leather +3 <input type="checkbox" id="armor" class="check"></h3>
+                <h3>Amulet of Health <input type="checkbox" id="amulet" class="check"></h3>
+                <h3>Complete Fiend's Pendant +Add-on <input type="checkbox" id="pendant" class="check"></h3>
+                <h3>Rod of the Pact Keeper +3 <input type="checkbox" id="rod" class="check"></h3>
                 <h3>Bag of Holding</h3>
                 <h3>Sabine's Gas Mask</h3>
             </div>
@@ -295,16 +294,16 @@
             <div class="list">
                 <h2>Fiend</h2>
                 <h3>Resilience of the Archfiend</h3>
-                <h3>Brimstone Affinity</h3>
-                <h3>Brimstone Transformation <input type="checkbox" id="transBrim"></h3>
-                <h3>Brimstone Crags <input type="checkbox" id="domBrim"></h3>
+                <h3>Brimstone Affinity <input type="number" id="affBrim" min="0" class="num"></h3>
+                <h3>Brimstone Transformation <input type="checkbox" id="transBrim" class="check"></h3>
+                <h3>Brimstone Crags <input type="checkbox" id="domBrim" class="check"></h3>
             </div>
             <div class="list">
                 <h2>Celestial</h2>
-                <h3>Healing Light</h3>
+                <h3>Healing Light <input type="number" id="healLit" min="0" class="num"></h3>
                 <h3>Radiant Soul</h3>
-                <h3>Seraphim's Touch</h3>
-                <h3>Seraph Transformation <input type="checkbox" id="transSera"></h3>
+                <h3>Seraphim's Touch <input type="number" id="touchSera" min="0" class="num"></h3>
+                <h3>Seraph Transformation <input type="checkbox" id="transSera" class="check"></h3>
             </div>
             <div class="list">
                 <h2>Undead/Undying</h2>

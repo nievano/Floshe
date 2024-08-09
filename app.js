@@ -28,6 +28,16 @@ class Skill {
         this.mod = abil.mod + (prof * this.bon);
     }
 }
+class Resimu {
+    constructor(type, num) {
+        this.type = type;
+        this.num = num;
+    }
+    equals(resimu) {
+        if(this.type === resimu.type && this.num === resimu.num) return true;
+        return false;
+    }
+}
 const lvl = 18;
 const prof = 6;
 const str = new Ability(8, 0);
@@ -65,6 +75,10 @@ let splatk = cha.mod + prof + 3;
 let spldc = 8 + cha.mod + prof + 3;
 const splslts = [0, 0, 0, 0, 0, 4, 0, 0, 2];
 const cvnslts = [2, 2, 2, 2, 2, 0, 0, 0, 0];
+const resimus = [new Resimu('Radiant', 1), new Resimu('Necrotic', 1)]; 
+let affBrim = 1 + prof;
+const healLit = new Dice(prof + lvl, 8);
+let touchSera = 3;
 
 getSign = (num) => { return Math.sign(num) != -1 ? '+' : ''; }
 getPlacement = (num) => {
@@ -124,9 +138,9 @@ function calcHpMax() {
 function setVars() {
     document.getElementById('level').innerHTML = `Level: ${lvl}`;
     document.getElementById('hpMax').innerHTML = `Max HP: ${hpMax}`;
-    document.getElementById('hpTemp').innerHTML = `Temp HP: ${hpTemp}`;
-    document.getElementById('hpAll').innerHTML = `HP: ${hpAll}`;
-    document.getElementById('hitDice').innerHTML = `Hit Dice: ${hitDice.toString()}`;
+    document.getElementById('hpTemp').value = hpTemp;
+    document.getElementById('hpAll').value= hpAll;
+    document.getElementById('hitDice').value = hitDice.num;
     document.getElementById('ac').innerHTML = `AC: ${ac}`;
     document.getElementById('prof').innerHTML = `Proficiency: +${prof}`;
     document.getElementById('spd').innerHTML = `Speed: ${spd}`;
@@ -134,9 +148,13 @@ function setVars() {
     document.getElementById('clvl').innerHTML = `Caster Level: ${lvl}`;
     document.getElementById('splatk').innerHTML = `Spell Attack: ${getSign(splatk)}${splatk}`;
     document.getElementById('spldc').innerHTML = `Spell DC: ${spldc}`;
+    document.getElementById('affBrim').value = affBrim;
+    document.getElementById('healLit').value = healLit.num;
+    document.getElementById('touchSera').value = touchSera;
     setScores();
     setSkills();
     setSlots();
+    setResimus();
 }
 
 function setScores() {
@@ -164,7 +182,31 @@ function setSlots() {
     const slts = [splslts, cvnslts];
     for (let i = 0; i < 2; i++) {
         for (let j = 0; j < splslts.length; j++) {
-            document.getElementById(`${abrv[i]}slt${j + 1}`).innerHTML = `${j + 1}${getPlacement(j + 1)} Level: ${slts[i][j]}`;
+            document.getElementById(`${abrv[i]}slt${j + 1}`).value = slts[i][j];
+        }
+    }
+}
+
+function setResimus() {
+    const resimu = document.getElementById('resimu');
+    for (let i = 0; i < resimu.childElementCount; i++) {
+        if (resimu.children[i].tagName === 'H3') {
+            resimu.children[i].remove();
+            i--;
+        }
+    }
+    resimus.sort((a, b) => { return b.num - a.num });
+    resimus.sort((a, b) => {
+        if (a.type < b.type) return -1;
+        if (a.type > b.type) return 1;
+        return 0;
+    });
+    for(let i = 0; i < resimus.length; i++) {
+        if(i === 0 || resimus[i].type !== resimus[i - 1].type) {
+            const e = document.createElement('h3')
+            e.innerHTML = `${resimus[i].type}`;
+            if (resimus[i].num === 2) resimu.appendChild(e);
+            else resimu.insertBefore(e, document.getElementById('imu'));
         }
     }
 }
@@ -180,6 +222,8 @@ function setChecks() {
 }
 
 window.onload = () => {
+    document.getElementById('hitDice').parentElement.insertAdjacentHTML('beforeend', `d${hitDice.sides}`);
+    document.getElementById('healLit').parentElement.insertAdjacentHTML('beforeend', `d${healLit.sides}`);
     setChecks();
     setVars();
 }
