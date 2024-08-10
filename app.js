@@ -79,6 +79,8 @@ const resimus = [new Resimu('Radiant', 1), new Resimu('Necrotic', 1)];
 let affBrim = 1 + prof;
 const healLit = new Dice(prof + lvl, 8);
 let touchSera = 3;
+let yche = 3;
+const conPat = new Dice(prof, 8);
 
 getSign = (num) => { return Math.sign(num) != -1 ? '+' : ''; }
 getPlacement = (num) => {
@@ -129,6 +131,18 @@ function calcWis(score) {
     surv.setMod(wis);
 }
 
+function calcCha(score) {
+    splatk -= cha.mod;
+    spldc -= cha.mod;
+    cha.setScore(score);
+    dece.setMod(cha);
+    inti.setMod(cha);
+    perf.setMod(cha);
+    pers.setMod(cha);
+    splatk += cha.mod;
+    spldc += cha.mod;
+}
+
 function calcHpMax() {
     hpAll -= hpMax
     hpMax = (con.mod + 5) * lvl + 8;
@@ -151,6 +165,8 @@ function setVars() {
     document.getElementById('affBrim').value = affBrim;
     document.getElementById('healLit').value = healLit.num;
     document.getElementById('touchSera').value = touchSera;
+    document.getElementById('yche').value = yche;
+    document.getElementById('conPat').value = conPat.num;
     setScores();
     setSkills();
     setSlots();
@@ -219,11 +235,15 @@ function setChecks() {
     document.getElementById('transBrim').checked = false;
     document.getElementById('domBrim').checked = false;
     document.getElementById('transSera').checked = false;
+    document.getElementById('transUnd').checked = false;
+    document.getElementById('transVoid').checked = false;
+    document.getElementById('potEag').checked = false;
 }
 
 window.onload = () => {
     document.getElementById('hitDice').parentElement.insertAdjacentHTML('beforeend', `d${hitDice.sides}`);
     document.getElementById('healLit').parentElement.insertAdjacentHTML('beforeend', `d${healLit.sides}`);
+    document.getElementById('conPat').parentElement.insertAdjacentHTML('beforeend', `d${conPat.sides}`);
     setChecks();
     setVars();
 }

@@ -93,6 +93,28 @@ document.querySelector('input[id=transSera]').addEventListener('change', () => {
     }
     setVars();
 });
+document.querySelector('input[id=transUnd]').addEventListener('change', () => {
+    if (document.getElementById('transUnd').checked) {
+        resimus.push(new Resimu('Nonmagical Physical', 1));
+        resimus.push(new Resimu('Necrotic', 2));
+    }
+    else {
+        resimus.splice(resimus.findIndex((a) => a.equals(new Resimu('Necrotic', 2))), 1);
+        resimus.splice(resimus.findIndex((a) => a.equals(new Resimu('Nonmagical Physical', 1))), 1);
+    }
+    setVars();
+});
+document.querySelector('input[id=transVoid]').addEventListener('change', () => {
+    if (document.getElementById('transVoid').checked) {
+        resimus.push(new Resimu('Nonmagical Physical', 1));
+        resimus.push(new Resimu('Force', 2));
+    }
+    else {
+        resimus.splice(resimus.findIndex((a) => a.equals(new Resimu('Force', 2))), 1);
+        resimus.splice(resimus.findIndex((a) => a.equals(new Resimu('Nonmagical Physical', 1))), 1);
+    }
+    setVars();
+});
 document.querySelector('input[id=hpTemp]').addEventListener('change', () => {
     hpAll -= hpTemp;
     hpTemp = parseInt(document.getElementById('hpTemp').value);
@@ -128,5 +150,22 @@ document.querySelector('input[id=healLit]').addEventListener('change', () => {
 });
 document.querySelector('input[id=touchSera]').addEventListener('change', () => {
     touchSera = parseInt(document.getElementById('touchSera').value);
+    setVars();
+});
+document.querySelector('input[id=yche]').addEventListener('change', () => {
+    yche = parseInt(document.getElementById('yche').value);
+    setVars();
+});
+document.querySelector('input[id=conPat]').addEventListener('change', () => {
+    conPat.num = parseInt(document.getElementById('conPat').value);
+    setVars();
+});
+document.querySelector('input[id=potEag]').addEventListener('change', () => {
+    if (document.getElementById('potEag').checked) {
+        calcCha(cha.score + 4);
+    }
+    else {
+        calcCha(cha.score - 4);
+    }
     setVars();
 });
