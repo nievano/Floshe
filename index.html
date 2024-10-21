@@ -7,344 +7,346 @@
         <link rel="icon" type="image" href="img/fish.png">
     </head>
     <body>
-        <div class="inline">
-            <h1>Floshe</h1>
-            <h2 id="level"></h2>
-            <h2>Class: Void Undead/Undying Celestial Fiend Warlock</h2>
-            <h2>Race: Locathah</h2>
-            <h2>Background: Courtier</h2>
-            <h2>Alignment: True Neutral</h2>
-        </div>
-        <div class="inline">
-            <h2 id="hpMax"></h2>
-            <h2>Temp HP:  <input type="number" id="hpTemp" min="0" class="num"></h2>
-            <h2>HP: <input type="number" id="hpAll" class="num"></h2>
-            <h2>Hit Dice: <input type="number" id="hitDice" class="num"></h2>
-            <h2 id="ac"></h2>
-            <h2 id="prof"></h2>
-            <h2 id="spd"></h2>
-            <h2 id="init"></h2>
-        </div>
-        <div class="inline">
-            <div class="abil">
-                <h1 id="strScr"></h1>
-                <h3 id="strMod"></h3>
-                <h3 id="strSav"></h3>
+        <main>
+            <div class="inline">
+                <h1>Floshe</h1>
+                <h2 id="level"></h2>
+                <h2>Class: Void Undead/Undying Celestial Fiend Warlock</h2>
+                <h2>Race: Locathah</h2>
+                <h2>Background: Courtier</h2>
+                <h2>Alignment: True Neutral</h2>
             </div>
-            <div class="abil">
-                <h1 id="dexScr"></h1>
-                <h3 id="dexMod"></h3>
-                <h3 id="dexSav"></h3>
+            <div class="inline">
+                <h2 id="hpMax"></h2>
+                <h2>Temp HP:  <input type="number" id="hpTemp" min="0" class="num"></h2>
+                <h2>HP: <input type="number" id="hpAll" class="num"></h2>
+                <h2>Hit Dice: <input type="number" id="hitDice" class="num"></h2>
+                <h2 id="ac"></h2>
+                <h2 id="prof"></h2>
+                <h2 id="spd"></h2>
+                <h2 id="init"></h2>
             </div>
-            <div class="abil">
-                <h1 id="conScr"></h1>
-                <h3 id="conMod"></h3>
-                <h3 id="conSav"></h3>
+            <div class="inline">
+                <div class="abil">
+                    <h1 id="strScr"></h1>
+                    <h3 id="strMod"></h3>
+                    <h3 id="strSav"></h3>
+                </div>
+                <div class="abil">
+                    <h1 id="dexScr"></h1>
+                    <h3 id="dexMod"></h3>
+                    <h3 id="dexSav"></h3>
+                </div>
+                <div class="abil">
+                    <h1 id="conScr"></h1>
+                    <h3 id="conMod"></h3>
+                    <h3 id="conSav"></h3>
+                </div>
+                <div class="abil">
+                    <h1 id="intScr"></h1>
+                    <h3 id="intMod"></h3>
+                    <h3 id="intSav"></h3>
+                </div>
+                <div class="abil">
+                    <h1 id="wisScr"></h1>
+                    <h3 id="wisMod"></h3>
+                    <h3 id="wisSav"></h3>
+                </div>
+                <div class="abil">
+                    <h1 id="chaScr"></h1>
+                    <h3 id="chaMod"></h3>
+                    <h3 id="chaSav"></h3>
+                </div>
             </div>
-            <div class="abil">
-                <h1 id="intScr"></h1>
-                <h3 id="intMod"></h3>
-                <h3 id="intSav"></h3>
+            <div class="inline">
+                <div class="list">
+                    <h2>Strength</h2>
+                    <h3 id="athl"></h3>
+                </div>
+                <div class="list">
+                    <h2>Dexterity</h2>
+                    <h3 id="acro"></h3>
+                    <h3 id="slei"></h3>
+                    <h3 id="stea"></h3>
+                </div>
+                <div class="list">
+                    <h2>Intelligence</h2>
+                    <h3 id="arca"></h3>
+                    <h3 id="hist"></h3>
+                    <h3 id="inve"></h3>
+                    <h3 id="natu"></h3>
+                    <h3 id="reli"></h3>
+                </div>
+                <div class="list">
+                    <h2>Wisdom</h2>
+                    <h3 id="anim"></h3>
+                    <h3 id="insi"></h3>
+                    <h3 id="medi"></h3>
+                    <h3 id="perc"></h3>
+                    <h3 id="surv"></h3>
+                </div>
+                <div class="list">
+                    <h2>Charisma</h2>
+                    <h3 id="dece"></h3>
+                    <h3 id="inti"></h3>
+                    <h3 id="perf"></h3>
+                    <h3 id="pers"></h3>
+                </div>
+                <div class="list">
+                    <h2>Proficiencies</h2>
+                    <h3>Light Armor</h3>
+                    <h3>Simple Weapons</h3>
+                </div>
+                <div class="list">
+                    <h2>Languages</h2>
+                    <h3>Common</h3>
+                    <h3>Abyssal</h3>
+                    <h3>Aquan</h3>
+                    <h3>Celestial</h3>
+                    <h3>Sign Language</h3>
+                    <h3>Ignan</h3>
+                    <h3>Infernal</h3>
+                </div>
+                <div class="list" id="resimu">
+                    <h2>Resistances</h2>
+                    <h2 id="imu">Immunities</h2>
+                </div>
             </div>
-            <div class="abil">
-                <h1 id="wisScr"></h1>
-                <h3 id="wisMod"></h3>
-                <h3 id="wisSav"></h3>
+            <div class="inline">
+                <div>
+                    <h1>Spellcasting</h1>
+                    <h2 id="clvl"></h2>
+                    <h2 id="splatk"></h2>
+                    <h2 id="spldc"></h2>
+                </div>
+                <div class="list">
+                    <h2>Spell Slots</h2>
+                    <h3><input type="number" id="splslt1" min="0" class="num"></h3>
+                    <h3><input type="number" id="splslt2" min="0" class="num"></h3>
+                    <h3><input type="number" id="splslt3" min="0" class="num"></h3>
+                    <h3><input type="number" id="splslt4" min="0" class="num"></h3>
+                    <h3><input type="number" id="splslt5" min="0" class="num"></h3>
+                    <h3><input type="number" id="splslt6" min="0" class="num"></h3>
+                    <h3><input type="number" id="splslt7" min="0" class="num"></h3>
+                    <h3><input type="number" id="splslt8" min="0" class="num"></h3>
+                    <h3><input type="number" id="splslt9" min="0" class="num"></h3>
+                </div>
+                <div class="list">
+                    <h2>Coven Slots</h2>
+                    <h3><input type="number" id="cvnslt1" min="0" class="num"></h3>
+                    <h3><input type="number" id="cvnslt2" min="0" class="num"></h3>
+                    <h3><input type="number" id="cvnslt3" min="0" class="num"></h3>
+                    <h3><input type="number" id="cvnslt4" min="0" class="num"></h3>
+                    <h3><input type="number" id="cvnslt5" min="0" class="num"></h3>
+                    <h3><input type="number" id="cvnslt6" min="0" class="num"></h3>
+                    <h3><input type="number" id="cvnslt7" min="0" class="num"></h3>
+                    <h3><input type="number" id="cvnslt8" min="0" class="num"></h3>
+                    <h3><input type="number" id="cvnslt9" min="0" class="num"></h3>
+                </div>
+                <div class="list">
+                    <h2>Cantrips</h2>
+                    <h3>Fire Bolt</h3>
+                    <h3>Encode Thoughts</h3>
+                    <h3>Eldritch Blast</h3>
+                    <h3>Message</h3>
+                    <h3>Minor Illusion</h3>
+                    <h3>Mold Earth</h3>
+                    <h3>Prestidigitation</h3>
+                    <h3>Produce Flame</h3>
+                    <h3>Sacred Flame</h3>
+                    <h3>Shocking Grasp</h3>
+                </div>
+                <div class="list">
+                    <h2>Spells</h2>
+                    <h3>Detect Thoughts</h3>
+                    <h3>Hellish Rebuke</h3>
+                    <h3>Magic Missle</h3>
+                    <h3>Scorching Ray</h3>
+                    <h3>Thought Shield</h3>
+                    <h3>Ashardalon's Stride</h3>
+                    <h3>Dispel Magic</h3>
+                    <h3>Fireball</h3>
+                    <h3>Life Transference</h3>
+                    <h3>Melf's Minute Meteors</h3>
+                    <h3>Revivify</h3>
+                    <h3>Spirit Shroud</h3>
+                    <h3>Dimension Door</h3>
+                    <h3>Sickening Radiance</h3>
+                    <h3>Prayer of Healing</h3>
+                    <h3>Death Ward</h3>
+                    <h3>Scrying</h3>
+                </div>
+                <div class="list">
+                    <h2>Rituals</h2>
+                    <h3>Alarm</h3>
+                    <h3>Ceremony</h3>
+                    <h3>Comprehend Languages</h3>
+                    <h3>Detect Magic</h3>
+                    <h3>Detect Poison and Disease</h3>
+                    <h3>Find Familiar</h3>
+                    <h3>Guiding Hand</h3>
+                    <h3>Identify</h3>
+                    <h3>Illusory Script</h3>
+                    <h3>Memorize Spell</h3>
+                    <h3>Purify Food and Drink</h3>
+                    <h3>Scribe Spell</h3>
+                    <h3>Speak with Animals</h3>
+                    <h3>Tenser's Floating Disk</h3>
+                    <h3>Unseen Servant</h3>
+                    <h3>Wild Cunning</h3>
+                    <h3>Wristpocket</h3>
+                    <h3>Clairvoyance</h3>
+                    <h3>Glyph of Warding</h3>
+                    <h3>Modify Spell</h3>
+                    <h3>Commune</h3>
+                    <h3>Teleportation Circle</h3>
+                    <h3>Contingency</h3>
+                </div>
+                <div class="list">
+                    <h2>Mystic Arcanum</h2>
+                    <h3>Forbiddance</h3>
+                    <h3>Plane Shift</h3>
+                    <h3>Sunburst</h3>
+                    <h3>Foresight</h3>
+                </div>
+                <div class="list">
+                    <h2>Coven</h2>
+                    <h3>Shield</h3>
+                    <h3>Silvery Barbs</h3>
+                    <h3>Calm Emotions</h3>
+                    <h3>Wither and Bloom</h3>
+                    <h3>Counterspell</h3>
+                    <h3>Sending</h3>
+                    <h3>Banishment</h3>
+                    <h3>Polymorph</h3>
+                    <h3>Immolation</h3>
+                    <h3>Teleportation Circle</h3>
+                </div>
             </div>
-            <div class="abil">
-                <h1 id="chaScr"></h1>
-                <h3 id="chaMod"></h3>
-                <h3 id="chaSav"></h3>
+            <div class="inline">
+                <h1>Inventory</h1>
+                <div class="list">
+                    <h2>Currency</h2>
+                    <h3>Bank: 39,648 GP</h3>
+                    <h3>Bag: 151,650 GP</h3>
+                </div>
+                <div class="list">
+                    <h2>Equipment</h2>
+                    <h3>Glamoured Studded Leather +3 <input type="checkbox" id="armor" class="check"></h3>
+                    <h3>Amulet of Health <input type="checkbox" id="amulet" class="check"></h3>
+                    <h3>Complete Fiend's Pendant +Add-on <input type="checkbox" id="pendant" class="check"></h3>
+                    <h3>Rod of the Pact Keeper +3 <input type="checkbox" id="rod" class="check"></h3>
+                    <h3>Bag of Holding</h3>
+                    <h3>Sabine's Gas Mask</h3>
+                </div>
+                <div class="list">
+                    <h2>Items</h2>
+                    <h3>Fine Clothes</h3>
+                    <h3>Rope 60ft</h3>
+                    <h3>Binder</h3>
+                    <h3>Parchment</h3>
+                    <h3>Ink Pen</h3>
+                    <h3>Gasoline 1gal</h3>
+                    <h3>Camera</h3>
+                    <h3>Nathan's Paper</h3>
+                    <h3>Maid's Stopwatch</h3>
+                    <h3>Hazel's Tablet</h3>
+                    <h3>Calamitus' Tome</h3>
+                    <h3>Silla's Contract<h3>
+                    <h3>Nameless' Poem</h3>
+                    <h3>Crayons</h3>
+                </div>
+                <div class="list">
+                    <h2>Potions</h2>
+                    <h3>Supreme Healing</h3>
+                    <h3>Eagle's Splendor <input type="checkbox" id="potEag" class="check"></h3>
+                </div>
+                <div class="list">
+                    <h2>Glyphs</h2>
+                    <h3>Prismatic Wall</h3>
+                    <h3>Astral Projection</h3>
+                    <h3>Gate</h3>
+                    <h3>Spirit Shroud</h3>
+                    <h3>Meteor Swarm</h3>
+                </div>
             </div>
-        </div>
-        <div class="inline">
-            <div class="list">
-                <h2>Strength</h2>
-                <h3 id="athl"></h3>
+            <div class="inline">
+                <h1>Features</h1>
+                <div class="list">
+                    <h2>Race</h2>
+                    <h3>Natural Armor</h3>
+                    <h3>Leviathan Will</h3>
+                    <h3>Limited Amphibiousness</h3>
+                    <h2>Background</h2>
+                    <h3>Court Functionary</h3>
+                </div>
+                <div class="list">
+                    <h2>Class</h2>
+                    <h3>Pact Magic</h3>
+                    <h3>Otherworldly Patron</h3>
+                    <h3>Eldritch Invocations</h3>
+                    <h3><a href="embra.html">Pact Boon (Tome)</a></h3>
+                    <h3>Mystic Arcanum</h3>
+                    <h3>Contact Patron <input type="number" id="conPat" min="0" class="num"></h3>
+                    <h3>Transformations</h3>
+                </div>
+                <div class="list">
+                    <h2>Fiend</h2>
+                    <h3><a href="feature.html#rota">Resilience of the Archfiend</a></h3>
+                    <h3><a href="feature.html#braf">Brimstone Affinity</a> <input type="number" id="affBrim" min="0" class="num"></h3>
+                    <h3><a href="feature.html#brtr">Brimstone Transformation</a> <input type="checkbox" id="transBrim" class="check"></h3>
+                    <h3><a href="feature.html#brcr">Brimstone Crags</a> <input type="checkbox" id="domBrim" class="check"></h3>
+                </div>
+                <div class="list">
+                    <h2>Celestial</h2>
+                    <h3><a href="feature.html#heli">Healing Light</a> <input type="number" id="healLit" min="0" class="num"></h3>
+                    <h3><a href="feature.html#raso">Radiant Soul</a></h3>
+                    <h3><a href="feature.html#seto">Seraphim's Touch</a> <input type="number" id="touchSera" min="0" class="num"></h3>
+                    <h3><a href="feature.html#setr">Seraph Transformation</a> <input type="checkbox" id="transSera" class="check"></h3>
+                </div>
+                <div class="list">
+                    <h2><a href="feature.html#unun"></a>Undead/Undying</h2>
+                    <h3><a href="feature.html#nody"></a>Not Dead Yet</h3>
+                    <h3><a href="feature.html#sofi"></a>Soul Fire</h3>
+                    <h3><a href="feature.html#untf"></a>Undying Transformation <input type="checkbox" id="transUnd" class="check"></h3>
+                    <h3><a href="feature.html#yoce"></a>Your Contract has Expired <input type="number" id="yche" min="0" class="num"></h3>
+                </div>
+                <div class="list">
+                    <h2>Void</h2>
+                    <h3>For Nothing</h3>
+                    <h3>For Everything</h3>
+                    <h3>Visitors' Gift</h3>
+                    <h3>Voidling Transformation <input type="checkbox" id="transVoid" class="check"></h3>
+                </div>
+                <div class="list">
+                    <h2>Contracts</h2>
+                    <h3>Bye, Bye</h3>
+                    <h3>Yoink or Yeet</h3>
+                    <h3>Deal with the Devil</h3>
+                    <h3>Wow This Place Sucks</h3>
+                </div>
+                <div class="list">
+                    <h2>Feats</h2>
+                    <h3>Fire Elemental Adept</h3>
+                    <h3>Observant</h3>
+                    <h3>War Caster</h3>
+                    <h3>Spell Sniper</h3>
+                    <h3>Linguist</h3>
+                    <h3>Flash Recall</h3>
+                </div>
+                <div class="list">
+                    <h2>Invocations</h2>
+                    <h3>Devil's Sight</h3>
+                    <h3>Book of Ancient Secrets</h3>
+                    <h3>Ghostly Gaze</h3>
+                    <h3>Eyes of the Rune Keeper</h3>
+                    <h3>Aspect of the Moon</h3>
+                    <h3>Witch Sight</h3>
+                    <h3>Eldritch Spear</h3>
+                    <h3>Kiss of Mephistopheles</h3>
+                </div>
             </div>
-            <div class="list">
-                <h2>Dexterity</h2>
-                <h3 id="acro"></h3>
-                <h3 id="slei"></h3>
-                <h3 id="stea"></h3>
-            </div>
-            <div class="list">
-                <h2>Intelligence</h2>
-                <h3 id="arca"></h3>
-                <h3 id="hist"></h3>
-                <h3 id="inve"></h3>
-                <h3 id="natu"></h3>
-                <h3 id="reli"></h3>
-            </div>
-            <div class="list">
-                <h2>Wisdom</h2>
-                <h3 id="anim"></h3>
-                <h3 id="insi"></h3>
-                <h3 id="medi"></h3>
-                <h3 id="perc"></h3>
-                <h3 id="surv"></h3>
-            </div>
-            <div class="list">
-                <h2>Charisma</h2>
-                <h3 id="dece"></h3>
-                <h3 id="inti"></h3>
-                <h3 id="perf"></h3>
-                <h3 id="pers"></h3>
-            </div>
-            <div class="list">
-                <h2>Proficiencies</h2>
-                <h3>Light Armor</h3>
-                <h3>Simple Weapons</h3>
-            </div>
-            <div class="list">
-                <h2>Languages</h2>
-                <h3>Common</h3>
-                <h3>Abyssal</h3>
-                <h3>Aquan</h3>
-                <h3>Celestial</h3>
-                <h3>Sign Language</h3>
-                <h3>Ignan</h3>
-                <h3>Infernal</h3>
-            </div>
-            <div class="list" id="resimu">
-                <h2>Resistances</h2>
-                <h2 id="imu">Immunities</h2>
-            </div>
-        </div>
-        <div class="inline">
-            <div>
-                <h1>Spellcasting</h1>
-                <h2 id="clvl"></h2>
-                <h2 id="splatk"></h2>
-                <h2 id="spldc"></h2>
-            </div>
-            <div class="list">
-                <h2>Spell Slots</h2>
-                <h3><input type="number" id="splslt1" min="0" class="num"></h3>
-                <h3><input type="number" id="splslt2" min="0" class="num"></h3>
-                <h3><input type="number" id="splslt3" min="0" class="num"></h3>
-                <h3><input type="number" id="splslt4" min="0" class="num"></h3>
-                <h3><input type="number" id="splslt5" min="0" class="num"></h3>
-                <h3><input type="number" id="splslt6" min="0" class="num"></h3>
-                <h3><input type="number" id="splslt7" min="0" class="num"></h3>
-                <h3><input type="number" id="splslt8" min="0" class="num"></h3>
-                <h3><input type="number" id="splslt9" min="0" class="num"></h3>
-            </div>
-            <div class="list">
-                <h2>Coven Slots</h2>
-                <h3><input type="number" id="cvnslt1" min="0" class="num"></h3>
-                <h3><input type="number" id="cvnslt2" min="0" class="num"></h3>
-                <h3><input type="number" id="cvnslt3" min="0" class="num"></h3>
-                <h3><input type="number" id="cvnslt4" min="0" class="num"></h3>
-                <h3><input type="number" id="cvnslt5" min="0" class="num"></h3>
-                <h3><input type="number" id="cvnslt6" min="0" class="num"></h3>
-                <h3><input type="number" id="cvnslt7" min="0" class="num"></h3>
-                <h3><input type="number" id="cvnslt8" min="0" class="num"></h3>
-                <h3><input type="number" id="cvnslt9" min="0" class="num"></h3>
-            </div>
-            <div class="list">
-                <h2>Cantrips</h2>
-                <h3>Fire Bolt</h3>
-                <h3>Encode Thoughts</h3>
-                <h3>Eldritch Blast</h3>
-                <h3>Message</h3>
-                <h3>Minor Illusion</h3>
-                <h3>Mold Earth</h3>
-                <h3>Prestidigitation</h3>
-                <h3>Produce Flame</h3>
-                <h3>Sacred Flame</h3>
-                <h3>Shocking Grasp</h3>
-            </div>
-            <div class="list">
-                <h2>Spells</h2>
-                <h3>Detect Thoughts</h3>
-                <h3>Hellish Rebuke</h3>
-                <h3>Magic Missle</h3>
-                <h3>Scorching Ray</h3>
-                <h3>Thought Shield</h3>
-                <h3>Ashardalon's Stride</h3>
-                <h3>Dispel Magic</h3>
-                <h3>Fireball</h3>
-                <h3>Hex</h3>
-                <h3>Melf's Minute Meteors</h3>
-                <h3>Revivify</h3>
-                <h3>Spirit Shroud</h3>
-                <h3>Dimension Door</h3>
-                <h3>Sickening Radiance</h3>
-                <h3>Prayer of Healing</h3>
-                <h3>Death Ward</h3>
-                <h3>Scrying</h3>
-            </div>
-            <div class="list">
-                <h2>Rituals</h2>
-                <h3>Alarm</h3>
-                <h3>Ceremony</h3>
-                <h3>Comprehend Languages</h3>
-                <h3>Detect Magic</h3>
-                <h3>Detect Poison and Disease</h3>
-                <h3>Find Familiar</h3>
-                <h3>Guiding Hand</h3>
-                <h3>Identify</h3>
-                <h3>Illusory Script</h3>
-                <h3>Memorize Spell</h3>
-                <h3>Purify Food and Drink</h3>
-                <h3>Scribe Spell</h3>
-                <h3>Speak with Animals</h3>
-                <h3>Tenser's Floating Disk</h3>
-                <h3>Unseen Servant</h3>
-                <h3>Wild Cunning</h3>
-                <h3>Wristpocket</h3>
-                <h3>Clairvoyance</h3>
-                <h3>Glyph of Warding</h3>
-                <h3>Modify Spell</h3>
-                <h3>Commune</h3>
-                <h3>Teleportation Circle</h3>
-                <h3>Contingency</h3>
-            </div>
-            <div class="list">
-                <h2>Mystic Arcanum</h2>
-                <h3>Forbiddance</h3>
-                <h3>Plane Shift</h3>
-                <h3>Dark Star</h3>
-                <h3>Foresight</h3>
-            </div>
-            <div class="list">
-                <h2>Coven</h2>
-                <h3>Shield</h3>
-                <h3>Silvery Barbs</h3>
-                <h3>Calm Emotions</h3>
-                <h3>Wither and Bloom</h3>
-                <h3>Counterspell</h3>
-                <h3>Sending</h3>
-                <h3>Banishment</h3>
-                <h3>Polymorph</h3>
-                <h3>Immolation</h3>
-                <h3>Teleportation Circle</h3>
-            </div>
-        </div>
-        <div class="inline">
-            <h1>Inventory</h1>
-            <div class="list">
-                <h2>Currency</h2>
-                <h3>Bank: 39,648 GP</h3>
-                <h3>Bag: 1,650 GP</h3>
-            </div>
-            <div class="list">
-                <h2>Equipment</h2>
-                <h3>Glamoured Studded Leather +3 <input type="checkbox" id="armor" class="check"></h3>
-                <h3>Amulet of Health <input type="checkbox" id="amulet" class="check"></h3>
-                <h3>Complete Fiend's Pendant +Add-on <input type="checkbox" id="pendant" class="check"></h3>
-                <h3>Rod of the Pact Keeper +3 <input type="checkbox" id="rod" class="check"></h3>
-                <h3>Bag of Holding</h3>
-                <h3>Sabine's Gas Mask</h3>
-            </div>
-            <div class="list">
-                <h2>Items</h2>
-                <h3>Fine Clothes</h3>
-                <h3>Rope 60ft</h3>
-                <h3>Binder</h3>
-                <h3>Parchment</h3>
-                <h3>Ink Pen</h3>
-                <h3>Gasoline 1gal</h3>
-                <h3>Camera</h3>
-                <h3>Nathan's Paper</h3>
-                <h3>Maid's Stopwatch</h3>
-                <h3>Hazel's Tablet</h3>
-				<h3>Calamitus' Tome</h3>
-				<h3>Silla's Contract<h3>
-                <h3>Nameless' Poem</h3>
-                <h3>Crayons</h3>
-            </div>
-            <div class="list">
-                <h2>Potions</h2>
-                <h3>Supreme Healing</h3>
-                <h3>Eagle's Splendor <input type="checkbox" id="potEag" class="check"></h3>
-            </div>
-            <div class="list">
-                <h2>Glyphs</h2>
-                <h3>Prismatic Wall</h3>
-                <h3>Astral Projection</h3>
-                <h3>Gate</h3>
-                <h3>Spirit Shroud</h3>
-                <h3>Meteor Swarm</h3>
-            </div>
-        </div>
-        <div class="inline">
-            <h1>Features</h1>
-            <div class="list">
-                <h2>Race</h2>
-                <h3>Natural Armor</h3>
-                <h3>Leviathan Will</h3>
-                <h3>Limited Amphibiousness</h3>
-                <h2>Background</h2>
-                <h3>Court Functionary</h3>
-            </div>
-            <div class="list">
-                <h2>Class</h2>
-                <h3>Pact Magic</h3>
-                <h3>Otherworldly Patron</h3>
-                <h3>Eldritch Invocations</h3>
-                <h3>Pact Boon (Tome)</h3>
-                <h3>Mystic Arcanum</h3>
-                <h3>Contact Patron <input type="number" id="conPat" min="0" class="num"></h3>
-                <h3>Transformations</h3>
-            </div>
-            <div class="list">
-                <h2>Fiend</h2>
-                <h3><a href="feature.html#rota">Resilience of the Archfiend</a></h3>
-                <h3><a href="feature.html#braf">Brimstone Affinity</a> <input type="number" id="affBrim" min="0" class="num"></h3>
-                <h3><a href="feature.html#brtr">Brimstone Transformation</a> <input type="checkbox" id="transBrim" class="check"></h3>
-                <h3><a href="feature.html#brcr">Brimstone Crags</a> <input type="checkbox" id="domBrim" class="check"></h3>
-            </div>
-            <div class="list">
-                <h2>Celestial</h2>
-                <h3><a href="feature.html#heli">Healing Light</a> <input type="number" id="healLit" min="0" class="num"></h3>
-                <h3><a href="feature.html#raso">Radiant Soul</a></h3>
-                <h3><a href="feature.html#seto">Seraphim's Touch</a> <input type="number" id="touchSera" min="0" class="num"></h3>
-                <h3><a href="feature.html#setr">Seraph Transformation</a> <input type="checkbox" id="transSera" class="check"></h3>
-            </div>
-            <div class="list">
-                <h2>Undead/Undying</h2>
-                <h3>Not Dead Yet</h3>
-                <h3>Soul Fire</h3>
-                <h3>Undying Transformation <input type="checkbox" id="transUnd" class="check"></h3>
-                <h3>Your Contract has Expired <input type="number" id="yche" min="0" class="num"></h3>
-            </div>
-            <div class="list">
-                <h2>Void</h2>
-                <h3>For Nothing</h3>
-                <h3>For Everything</h3>
-                <h3>Visitors' Gift</h3>
-                <h3>Voidling Transformation <input type="checkbox" id="transVoid" class="check"></h3>
-            </div>
-            <div class="list">
-                <h2>Contracts</h2>
-                <h3>Bye, Bye</h3>
-                <h3>Yoink or Yeet</h3>
-                <h3>Deal with the Devil</h3>
-                <h3>Wow This Place Sucks</h3>
-            </div>
-            <div class="list">
-                <h2>Feats</h2>
-                <h3>Fire Elemental Adept</h3>
-                <h3>Observant</h3>
-                <h3>War Caster</h3>
-                <h3>Spell Sniper</h3>
-                <h3>Linguist</h3>
-                <h3>Flash Recall</h3>
-            </div>
-            <div class="list">
-                <h2>Invocations</h2>
-                <h3>Devil's Sight</h3>
-                <h3>Book of Ancient Secrets</h3>
-                <h3>Ghostly Gaze</h3>
-                <h3>Eyes of the Rune Keeper</h3>
-                <h3>Aspect of the Moon</h3>
-                <h3>Witch Sight</h3>
-                <h3>Eldritch Spear</h3>
-                <h3>Kiss of Mephistopheles</h3>
-            </div>
-        </div>
+        </main>
         <script src="app.js"></script>
         <script src="toggle.js"></script>
     </body>

@@ -1,7 +1,14 @@
 body {
-    background-color: #400000;
+    background-image: url('img/fire.png');
+    padding: 2em;
+}
+main {
+    background-color: #400;
     color: white;
     text-align: center;
+    padding: 2em;
+    border: 1em outset #300;
+    border-radius: 2em;
 }
 h1 {
     display: block;
@@ -54,4 +61,11 @@ summary > ul {
 }
 .list h2, h3 {
     display: block;
+}
+#embra {
+    background-image: url('img/stars.png');
+}
+#embra main{
+    background-color: #004;
+    border-color: #003;
 }
