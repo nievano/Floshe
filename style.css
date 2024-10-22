@@ -1,4 +1,5 @@
 body {
+    background-color: #000;
     background-image: url('img/fire.png');
     padding: 2em;
 }
@@ -14,6 +15,12 @@ h1 {
     display: block;
     margin: 1em;
     font-size: 1.5em;
+}
+h1 a {
+    font-size: 0.75em;
+}
+h1 :hover {
+    text-decoration: underline;
 }
 h2 {
     font-size: 1em;
