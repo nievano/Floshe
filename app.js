@@ -38,10 +38,10 @@ class Resimu {
         return false;
     }
 }
-const lvl = 18;
+const lvl = 19;
 const prof = 6;
 const str = new Ability(8, 0);
-const dex = new Ability(17, prof);
+const dex = new Ability(18, prof);
 const con = new Ability(19, 1);
 const int = new Ability(14, 0);
 const wis = new Ability(18, prof);
@@ -73,7 +73,7 @@ const perf = new Skill(cha, 0);
 const pers = new Skill(cha, 2);
 let splatk = cha.mod + prof + 3;
 let spldc = 8 + cha.mod + prof + 3;
-const splslts = [0, 0, 0, 0, 0, 4, 0, 0, 2];
+const splslts = [0, 0, 0, 0, 0, 4, 0, 0, 2, 2];
 const cvnslts = [2, 2, 2, 2, 2, 0, 0, 0, 0];
 const resimus = [new Resimu('Radiant', 1), new Resimu('Necrotic', 1)]; 
 let affBrim = 1 + prof;
@@ -198,6 +198,7 @@ function setSlots() {
     const slts = [splslts, cvnslts];
     for (let i = 0; i < 2; i++) {
         for (let j = 0; j < splslts.length; j++) {
+            if (i === 1 && j === cvnslts.length) break;
             document.getElementById(`${abrv[i]}slt${j + 1}`).value = slts[i][j];
         }
     }

@@ -132,6 +132,7 @@ document.querySelector('input[id=hitDice]').addEventListener('change', () => {
 for (let i = 0; i < 2; i++) {
     let abrv = i === 0 ? 'spl' : 'cvn';
     for (let j = 0; j < splslts.length; j++) {
+        if (i === 1 && j === cvnslts.length) break;
         document.getElementById(`${abrv}slt${j + 1}`).parentElement.innerHTML = (`${j + 1}${getPlacement(j + 1)} Level: ${document.getElementById(`${abrv}slt${j + 1}`).parentElement.innerHTML}`);
         document.querySelector(`input[id=${abrv}slt${j + 1}]`).addEventListener('change', () => {
             if (i === 0) splslts[j] = parseInt(document.getElementById(`${abrv}slt${j + 1}`).value);
