@@ -73,8 +73,8 @@ const perf = new Skill(cha, 0);
 const pers = new Skill(cha, 2);
 let splatk = cha.mod + prof + 3;
 let spldc = 8 + cha.mod + prof + 3;
-const splslts = [0, 0, 0, 0, 0, 4, 0, 0, 2, 2];
-const cvnslts = [2, 2, 2, 2, 2, 0, 0, 0, 0];
+const splslts = [0, 1, 0, 0, 0, 4, 0, 0, 2, 2];
+const cvnslts = [3, 3, 3, 3, 3, 2, 1];
 const resimus = [new Resimu('Radiant', 1), new Resimu('Necrotic', 1)]; 
 let affBrim = 1 + prof;
 const healLit = new Dice(prof + lvl, 8);
@@ -238,6 +238,7 @@ function setChecks() {
     document.getElementById('transSera').checked = false;
     document.getElementById('transUnd').checked = false;
     document.getElementById('transVoid').checked = false;
+    document.getElementById('transMach').checked = false;
     document.getElementById('potEag').checked = false;
 }
 

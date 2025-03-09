@@ -1,6 +1,7 @@
 const embLvl = 8;
 const embHitDice = new Dice(embLvl, 8);
 const embProf = 3;
+const embSpd = 5;
 const embInt = new Ability(19, embProf);
 const embWis = new Ability(30, embProf);
 const embCha = new Ability(4, 0);
@@ -20,7 +21,7 @@ const embPerf = new Skill(embCha, 0);
 const embPers = new Skill(embCha, 0);
 let embSplatk = embWis.mod + embProf + 3;
 let embSpldc = 8 + embWis.mod + embProf + 3;
-const embSplslts = [4, 3, 3, 2];
+const embSplslts = [4, 3, 3, 2, 1];
 
 function embSetScores() {
     const names = ['Intelligence', 'Wisdom', 'Charisma'];
@@ -52,6 +53,7 @@ function embSetVars() {
     document.getElementById('embLevel').innerHTML = `Level: ${embLvl}`;
     document.getElementById('embHitDice').value = embHitDice.num;
     document.getElementById('embProf').innerHTML = `Proficiency: +${embProf}`;
+    document.getElementById('embSpd').innerHTML = `Speed: ${embSpd}`;
     document.getElementById('embClvl').innerHTML = `Caster Level: ${embLvl}`;
     document.getElementById('embSplatk').innerHTML = `Spell Attack: ${getSign(embSplatk)}${embSplatk}`;
     document.getElementById('embSpldc').innerHTML = `Spell DC: ${embSpldc}`;

@@ -29,7 +29,7 @@ document.querySelector('input[id=pendant]').addEventListener('change', () => {
         spldc -= 3;
         splslts[4] = splslts[5];
         splslts[5] = 0;
-        splslts[8] -= 2;
+        splslts[8] -= splslts[8] > 2 ? 2 : splslts[8];;
     }
     setVars();
 });
@@ -112,6 +112,19 @@ document.querySelector('input[id=transVoid]').addEventListener('change', () => {
     else {
         resimus.splice(resimus.findIndex((a) => a.equals(new Resimu('Force', 2))), 1);
         resimus.splice(resimus.findIndex((a) => a.equals(new Resimu('Nonmagical Physical', 1))), 1);
+    }
+    setVars();
+});
+document.querySelector('input[id=transMach]').addEventListener('change', () => {
+    if (document.getElementById('transMach').checked) {
+        resimus.push(new Resimu('Nonmagical Physical', 1));
+        resimus.push(new Resimu('Lightning', 2));
+        splslts[6] += 2;
+    }
+    else {
+        resimus.splice(resimus.findIndex((a) => a.equals(new Resimu('Lightning', 2))), 1);
+        resimus.splice(resimus.findIndex((a) => a.equals(new Resimu('Nonmagical Physical', 1))), 1);
+        splslts[6] -= splslts[6] > 2 ? 2 : splslts[6];
     }
     setVars();
 });
