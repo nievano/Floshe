@@ -8,11 +8,6 @@ class Feature {
     toDiv() {
         const e = document.createElement('div');
         e.id = this.id;
-        // e.innerHTML = `<details><br><summary>${this.name}<ul>`;
-        // console.log(e.innerHTML);
-        // for (let b in this.bullets) e.innerHTML += `<li>${b}</li>`;
-        // e.innerHTML += `${this.desc}`;
-        // return e;
         e.appendChild(document.createElement('details'));
         e.firstChild.appendChild(document.createElement('br'));
         e.firstChild.appendChild(document.createElement('summary'));
@@ -22,10 +17,38 @@ class Feature {
             e.firstChild.lastElementChild.firstElementChild.appendChild(document.createElement('li'));
             e.firstChild.lastElementChild.firstElementChild.lastChild.innerHTML = this.bullets[i]
         }
-        e.firstChild.innerHTML += this.desc;
+        e.firstChild.innerHTML += this.desc + '<br><br>';
         return e;
     }
 }
+
+
+window.onload = () => {
+    for (let i = 0; i < feats.length; i++) {
+        if (i == 0 || i == 4 || i == 8 || i == 12 || i == 16) {
+            const e = document.createElement('div');
+            const c = document.createElement('div');
+            let s = cats.pop();
+            e.appendChild(document.createElement('h1'));
+            e.firstChild.innerHTML = s;
+            if (s.indexOf('/') != -1 ) s = 'undeath';
+            if (s.indexOf(' ') != -1) s = 'machine'
+            c.id = s.toLowerCase();
+            c.className = 'cat';
+            c.appendChild(e);
+            document.body.firstElementChild.appendChild(c);
+        }
+        document.body.firstElementChild.lastChild.lastChild.appendChild(feats[i].toDiv());
+    }
+}
+
+const cats = [
+    'Ghost in the Machine',
+    'Void',
+    'Undead/Undying',
+    'Celestial',
+    'Fiend'
+];
 
 const feats = [
     new Feature(
@@ -222,6 +245,64 @@ const feats = [
             '1min duration paused in void and abyss'
         ]
     ),
+    new Feature(
+        'Information Surge',
+        'insu',
+        'At 1st level, you gain the ability to temporarily render computerized devices inoperable. As an action, you can target a computerized device within 30 feet of you. If the targeted device is held or otherwise actively used by a living creature, that creature must make an Intelligence saving throw against your spell save DC. On a failed save, the targeted device ceases to function until the end of your next turn. If the targeted device is not held or used by a creature, the DM makes a special saving throw for the device with disadvantage and a +0 modifier. Certain shielded devices might negate the disadvantage, at the DM\'s determination.',
+        [
+            'as an action target computerized device within 30ft',
+            'if device is held or used by living creature they int save',
+            'device ceases function until end of next turn',
+            'prof uses regained on short/long rest'
+        ]
+    ),
+    new Feature(
+        'Wire Walk',
+        'wiwa',
+        'At 1st level, you gain the ability to travel short distances over electrical wires, data lines, or telephone cables. As a bonus action, you can touch a device or socket connected to a hardwired network and teleport along this network to another device or socket within your line of sight that you can see.<br><br>You gain a number of uses equal to your proficiency bonus, regaining all back on a short or long rest.',
+        [
+            'travel through wires/cables/etc',
+            'as a bonus action teleport through touched medium to a place you can see',
+            'prof uses regained on short/long rest'
+        ]
+    ),
+    new Feature(
+        'Personal Encryption',
+        'peen',
+        'Beginning at 6th level, you have learned to apply your innate knowledge of encryption to your thoughts, memories, and presence. You have advantage on saving throws against scrying, thought detection, or any other method of magically learning your whereabouts or reading your thoughts. For any such effect that does not grant you a saving throw but which requires the creature targeting you to make an ability check, the check is made with disadvantage.',
+        [
+            'adv on saves against scrying/thought detection/magic locating or mind reading',
+            'enemy creatures have disadv on check if there is not a save'
+        ]
+    ),
+    new Feature(
+        'Construct Transformation',
+        'cotr',
+        'Starting at 10th level, as bonus action, or as a reaction to being subjected to an effect or damage type that you have or could have immunity to, you can transform into your Construct form. When first transforming and as long as you\'re transformed, you gain access to two level 6 spell slots. While you\'re transformed, your Personal Encryption feature grants immunity for all of its effects. You have immunity to Lightning damage, and resistance to non-magical physical damage. You are also immune to spells and effects that would control your actions, such as command, suggestion, or other such spells that force you into doing certain actions against your will. You can understand and communicate with any construct or piece of technology that has the ability to communicate back. This transformation has a duration of 1 minute, which you can stop as another bonus action. Stopping the transformation early saves the remaining time left in the transformation for later. While in the Neon Veil, the transformation timer is paused, and the Construct transformation does not take up a transformation slot.<br><br>You regain the full duration for the transformation and the spell slots granted recharge on a short or long rest.',
+        [
+            'bonus action or reaction to effect that you have/could have immunity to',
+            'gain access to two lvl 6 spell slots',
+            'personal encryption grants immunity',
+            'immunity to lightning and resistance to nonmagical physical dmg',
+            'immune to spells that control actions',
+            'understand and communicate with constructs/technology that can',
+            '1min duration paused in neon veil',
+            'does not take up transformation slot',
+            'regain on short/long rest'
+        ]
+    ),
+    new Feature(
+        'Cyber Subjugation',
+        'cysu',
+        '(Important note: \'Gwen\' can exist anywhere within the Neon Veil, and will assist when and where possible)<br>At 14th level, you can temporarily transform your surroundings into the Neon Veil, a world of technology, bright lights, and undetectability. Upon using this feature, you can activate your Construct transformation for free. The radius is 90 feet around you, which lasts for a minute, following everywhere you go with you as the center. Creatures inside of the domain cannot be found or targeted by divination spells or similar effects, their exact whereabouts become hidden to anyone that were aware. While inside the radius, creatures cannot be banished, plane shift, or otherwise leave by means that aren\'t simply walking out of the area. Similarly, creatures cannot enter via the previously mentioned methods. This area transformation lasts for 1 minute.<br><br>You can use this feature once, regaining its use on a long rest.',
+        [
+            'transform surrounding to neon veil and can construct transform for free',
+            '90ft radius centered on and following you',
+            'creatures cannot be found through divination effects inclduing preexisting ones',
+            'creatures can only enter/leave through mundane means',
+            '1min duration regained on long rest'
+        ]
+    ),
 ];
 
 /*
@@ -234,7 +315,3 @@ const feats = [
         ]
     ),
 */
-
-window.onload = () => {
-    for (let i = 0; i < feats.length; i++) document.body.firstElementChild.appendChild(feats[i].toDiv());
-}

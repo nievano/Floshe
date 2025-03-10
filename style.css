@@ -25,6 +25,9 @@ h1 :hover {
 h2 {
     font-size: 1em;
 }
+h2 :hover {
+    text-decoration: underline;
+}
 h3 {
     font-size: 0.75em
 }
@@ -75,4 +78,42 @@ summary > ul {
 #embra main{
     background-color: #004;
     border-color: #003;
+}
+.cat, .cat div{
+    padding: 1em;
+    margin: 1em;
+    border-radius: 2em;
+}
+.cat {
+    padding: 3em;
+}
+#fiend {
+    background-image: url('img/fiend.png');
+}
+#fiend div{
+    background-color: #611; 
+}
+#celestial {
+    background-image: url('img/celes.png');
+}
+#celestial div{
+    background-color: #960;
+}
+#undeath {
+    background-image: url('img/und.png');
+}
+#undeath div{
+    background-color: #444;
+}
+#void {
+    background-image: url('img/void.png');
+}
+#void div{
+    background-color: #111;
+}
+#machine {
+    background-image: url('img/mach.png');
+}
+#machine div{
+    background-color: #131;
 }
